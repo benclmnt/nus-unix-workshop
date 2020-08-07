@@ -1,0 +1,52 @@
+[core]
+	editor = vim
+  pager = less -FRSX
+
+  # Use custom `.gitignore` and `.gitattributes`
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+[alias]
+  co = checkout
+  st = status -sb
+  br = branch
+  ci = commit
+  pu = push -u origin
+  d = !git --no-pager diff
+
+  # Clone a repository including all submodules
+  c = clone --recursive
+
+  # pull in remote changes for current repo and all its submodules
+  p = pull --recurse-submodules
+
+  # http://www.jukie.net/bart/blog/pimping-out-git-log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+  # Show verbose ouput about tags, branches or remotes
+  remotes = remote -v
+  tags = tag -l
+  branches = branch -a
+
+  contributors = shortlog --summary --numbered
+
+  # Change previous commit
+  coan = commit --amend --no-edit
+  coa = commit --amend
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+
+[color "branch"]
+  current = green
+  remote = yellow
+

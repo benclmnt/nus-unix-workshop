@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# `v` with no arguments opens the current dir in Vim, otherwise opens the
+# given location
+v() {
+  if [ $# -eq 0 ]; then
+    vim .;
+  else 
+    vim "$@";
+  fi;
+}
+
+# `o` with no arguments opens the current dir, otherwise opens the given
+# location
+o() {
+  if [ $# -eq 0 ]; then
+    explorer.exe .;
+  else
+    explorer.exe "$@";
+  fi;
+}

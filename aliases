@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# Easier navigation: .., ..., ...., ....., and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias up="cd .."
+alias up2="cd ../.."
+alias up3="cd ../../.."
+alias up4="cd ../../../.."
+# alias -- -="cd -"
+
+# Useful aliases
+alias mv="mv -i" # Prompt me if the target file alr exists
+alias cp="cp -i"
+# alias rm="rm -i"
+
+# List all files in long format, excluding . and .., in human readable format
+alias ll="ls -lAhF --color"
+
+# List only directories
+alias lsd="ls -lF --color | grep '^d'"
+
+# Always use color output for `ls`
+alias ls="command ls --color"
+
+# Shortcuts
+alias windir="cd /mnt/c/Users/<windows username>"
+
+# Enable aliases to be sudo'ed
+alias sudo='sudo '
+
+# untar
+alias untar='tar xvf'
+
+# vhosts
+alias hosts='sudo vim /etc/hosts'
+
+# chrome
+alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+# Always enable colored `grep` output
+# Is avalaible in bashrc so skipping
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# soc sunfire
+alias sunfire='ssh <soc username>@sunfire.comp.nus.edu.sg'
+
